@@ -22,6 +22,7 @@
 
     <div class="new-todo">
       <input
+        @keyup.enter="addNewToDo"
         v-model="newToDoElement.text"
         type="text" 
         placeholder="Inserisci nuovo ToDo"
