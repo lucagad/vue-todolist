@@ -36,7 +36,8 @@
       <ul>
         <li 
           v-for="(todo, index) in arrayToDo"
-          :class="{'done' : todo.done}" 
+          :class="{'done' : todo.done}"
+          @click="todo.done = !todo.done"
         >{{todo.text}}
           <i 
             class="fa-solid fa-x"
