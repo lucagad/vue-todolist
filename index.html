@@ -14,9 +14,7 @@
 </head>
 <body>
   
-
   <div id="app" class="container">
-
 
     <div class="title">
       <h2>ToDo List</h2>
@@ -35,11 +33,18 @@
     <div class="to-do-list">
 
       <ul>
-        <li v-for="(todo, index) in arrayToDo"> {{todo.text}}</li>
+        <li 
+          v-for="(todo, index) in arrayToDo"
+          :class="{'done' : todo.done}" 
+        >{{todo.text}}
+          <i 
+            class="fa-solid fa-x"
+            @click="deleteToDo(index)">
+          </i>
+        </li>
       </ul>
 
     </div>
-
 
   </div>
 

@@ -26,7 +26,7 @@ const app = new Vue({
     arrayToDo: [
       {
         text: 'Fare la Spesa',
-        done: false
+        done: true
       },
 
       {
@@ -45,6 +45,7 @@ const app = new Vue({
       done: false
     }
   },
+
   methods: {
 
     addNewToDo(){
@@ -55,8 +56,12 @@ const app = new Vue({
 
       }
 
+    },
+    deleteToDo(index){
+      if (confirm(`Sei sicuro di eliminate: ${this.arrayToDo[index].text}?`)) {
+        this.arrayToDo.splice(index,1);
+      }
     }
-
   }
 
 });
