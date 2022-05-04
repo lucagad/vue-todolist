@@ -23,7 +23,7 @@
     <div class="new-todo">
       <input
         @keyup.enter="addNewToDo"
-        v-model="newToDoElement.text"
+        v-model="newToDoElement"
         type="text" 
         placeholder="Inserisci nuovo ToDo"
       >
@@ -39,10 +39,12 @@
           :class="{'done' : todo.done}"
           @click="todo.done = !todo.done"
         >{{todo.text}}
+
           <i 
             class="fa-solid fa-x"
             @click="deleteToDo(index)">
           </i>
+          
         </li>
       </ul>
 

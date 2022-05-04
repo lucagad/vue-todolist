@@ -40,19 +40,20 @@ const app = new Vue({
       },
 
     ],
-    newToDoElement: {
-      text: '',
-      done: false
-    }
+    newToDoElement: ''
   },
 
   methods: {
 
     addNewToDo(){
-      if(this.newToDoElement.text.length > 1){
+      if(this.newToDoElement.length > 1){
 
-        this.arrayToDo.push(this.newToDoElement);
-        newToDoElement.text = '';
+        const newObject = {
+          text: this.newToDoElement, 
+          done: false };
+
+        this.arrayToDo.push(newObject);
+        this.newToDoElement = "";
 
       }
 

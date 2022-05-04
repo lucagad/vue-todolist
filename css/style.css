@@ -1,4 +1,48 @@
 
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.title{
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+}
+
+.new-todo{
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: lightgrey;
+  border-radius: 10px;
+}
+
+.to-do-list{
+  margin: 20px;
+  padding: 20px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+
+.to-do-list ul{
+  padding: 10px 20px;
+}
+
+.to-do-list ul li{
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 20px 10px;
+  border-bottom: 1px solid black;
+}
+
 .done {
   text-decoration: line-through;
 }
