@@ -33,7 +33,7 @@
 
     <div class="to-do-list">
 
-      <ul>
+      <ul v-if="arrayToDo.length > 0">
         <li 
           v-for="(todo, index) in arrayToDo"
           @click="todo.done = !todo.done"
@@ -51,6 +51,7 @@
           
         </li>
       </ul>
+      <h4 v-else> Non hai nessun promemoria</h4>
 
     </div>
 
