@@ -43,6 +43,18 @@
   border-bottom: 1px solid black;
 }
 
+.to-do-list ul li i{
+  color: grey;
+}
+
+.to-do-list ul li i:hover {
+  color: black;
+}
+
+.to-do-list ul li:hover {
+  background-color: rgba(224, 201, 201, 0.8);
+}
+
 .done {
   text-decoration: line-through;
 }

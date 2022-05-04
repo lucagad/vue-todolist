@@ -17,7 +17,7 @@
   <div id="app" class="container">
 
     <div class="title">
-      <h2>ToDo List</h2>
+      <h1>ToDo List</h1>
     </div>
 
     <div class="new-todo">
@@ -36,9 +36,13 @@
       <ul>
         <li 
           v-for="(todo, index) in arrayToDo"
-          :class="{'done' : todo.done}"
           @click="todo.done = !todo.done"
-        >{{todo.text}}
+        >
+
+        <div 
+          :class="{'done' : todo.done}"
+          class="todo-text">{{todo.text}}
+        </div>
 
           <i 
             class="fa-solid fa-x"
